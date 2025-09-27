@@ -3,10 +3,13 @@ sudo apt update
 sudo apt install dotnet-sdk-9.0
   VALIDATE DOTNET 9 INSTALLATION
 dotnet --version
+
   GENERATE PERSISTANT SESSION
 sudo screen -S dotnetapi
+
   RUN API
 sudo dotnet run
+
   EXIT SCREEN SESSION
 ctrl + a; + d
 ps aux | grep dotnetapi

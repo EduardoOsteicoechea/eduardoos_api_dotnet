@@ -1,11 +1,29 @@
-var builder = WebApplication.CreateBuilder(args);
+using Serilog;
 
-var app = builder.Build();
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("logs/eduardoos_api.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
 
-app.MapGet("/api", () =>
+try
 {
-    Console.WriteLine("Received Request");
-    return "Thanks Lord";
-});
+    var builder = WebApplication.CreateBuilder(args);
 
-app.Run();
+    var app = builder.Build();
+
+    app.MapGet("/api", () =>
+    {
+        Log.Information("Received Request");
+        return "Thanks Lord";
+    });
+
+    app.Run();
+}
+catch (System.Exception ex)
+{
+    Log.Fatal($"{ex.Message} - {ex.StackTrace}");
+}
+finally
+{
+    Log.CloseAndFlush();
+}

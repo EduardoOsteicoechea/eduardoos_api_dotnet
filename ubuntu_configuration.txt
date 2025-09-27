@@ -1,0 +1,23 @@
+
+    INSTALL DOTNET 9
+sudo add-apt-repository ppa:dotnet/backports
+sudo apt update
+sudo apt install dotnet-sdk-9.0
+
+    VALIDATE DOTNET 9 INSTALLATION
+dotnet --version
+
+    GENERATE PERSISTANT SESSION
+sudo screen -S dotnetapi
+
+    RUN API INSIDE OF PERSISTANT SESSION
+sudo dotnet run
+
+    EXIT SCREEN SESSION
+ctrl + a; + d
+
+    IDENTIFY PID
+sudo lsof -i :7771
+
+    Kill PID
+sudo kill -9 <PID>

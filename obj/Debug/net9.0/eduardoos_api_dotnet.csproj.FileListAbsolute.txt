@@ -31,3 +31,13 @@ C:\Users\eduar\Documents\work\internal\eduardoos\eduardoos_api_dotnet\obj\Debug\
 C:\Users\eduar\Documents\work\internal\eduardoos\eduardoos_api_dotnet\obj\Debug\net9.0\eduardoos_api_dotnet.pdb
 C:\Users\eduar\Documents\work\internal\eduardoos\eduardoos_api_dotnet\obj\Debug\net9.0\eduardoos_api_dotnet.genruntimeconfig.cache
 C:\Users\eduar\Documents\work\internal\eduardoos\eduardoos_api_dotnet\obj\Debug\net9.0\ref\eduardoos_api_dotnet.dll
+C:\Users\eduar\Documents\work\internal\eduardoos\eduardoos_api_dotnet\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\eduar\Documents\work\internal\eduardoos\eduardoos_api_dotnet\bin\Debug\net9.0\Serilog.dll
+C:\Users\eduar\Documents\work\internal\eduardoos\eduardoos_api_dotnet\bin\Debug\net9.0\Serilog.AspNetCore.dll
+C:\Users\eduar\Documents\work\internal\eduardoos\eduardoos_api_dotnet\bin\Debug\net9.0\Serilog.Extensions.Hosting.dll
+C:\Users\eduar\Documents\work\internal\eduardoos\eduardoos_api_dotnet\bin\Debug\net9.0\Serilog.Extensions.Logging.dll
+C:\Users\eduar\Documents\work\internal\eduardoos\eduardoos_api_dotnet\bin\Debug\net9.0\Serilog.Formatting.Compact.dll
+C:\Users\eduar\Documents\work\internal\eduardoos\eduardoos_api_dotnet\bin\Debug\net9.0\Serilog.Settings.Configuration.dll
+C:\Users\eduar\Documents\work\internal\eduardoos\eduardoos_api_dotnet\bin\Debug\net9.0\Serilog.Sinks.Console.dll
+C:\Users\eduar\Documents\work\internal\eduardoos\eduardoos_api_dotnet\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
+C:\Users\eduar\Documents\work\internal\eduardoos\eduardoos_api_dotnet\bin\Debug\net9.0\Serilog.Sinks.File.dll

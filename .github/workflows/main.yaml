@@ -49,4 +49,4 @@ jobs:
             echo "Restarting Nginx..."
             sudo systemctl restart nginx
             echo "Reloading Nginx configuration..."
-            sudo systemctl reload nginx
+            sudo systemctl reload nginx 

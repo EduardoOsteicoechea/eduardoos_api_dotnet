@@ -16,13 +16,13 @@ try
     app.MapGet("/api", () =>
     {
         Log.Information("Received Request");
-        return "Thanks Lord"; 
+        return "Thanks Lord";
     });
-    
-    app.MapGet("/api/profile/assistant", () =>
+
+    app.MapGet("/api/profile/assistant", async () =>
     {
-      var handler = new ProfileAssistantHandler();
-      return handler.Response();
+        var handler = new ProfileAssistantHandler();
+        return await handler.Response();
     });
 
     app.Run();

@@ -16,6 +16,8 @@ try
         Log.Information("Received Request");
         return "Thanks Lord"; 
     });
+    
+    app.MapProfileAssistantEndpoints();
 
     app.Run();
 }

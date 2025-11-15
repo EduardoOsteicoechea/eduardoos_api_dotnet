@@ -15,7 +15,7 @@ public class DeepseekApiClient
         };
 
         string jsonPayload = Newtonsoft.Json.JsonConvert.SerializeObject(requestPayload);
-        var httpContent = new StringContent(jsonPayload);
+        var httpContent = new StringContent(jsonPayload, System.Text.Encoding.UTF8, "application/json");
 
         var httpRequest = new HttpRequestMessage(HttpMethod.Post, Constants.DeepSeekChatUrl);
         httpRequest.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", Constants.DeepSeekApiKey);

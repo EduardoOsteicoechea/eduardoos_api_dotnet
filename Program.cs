@@ -19,10 +19,10 @@ try
         return "Thanks Lord";
     });
 
-    app.MapGet("/api/profile/assistant", async () =>
+    app.MapPost("/api/profile/assistant", async (DeepseekMessage message) =>
     {
         var handler = new ProfileAssistantHandler();
-        return await handler.Response();
+        return await handler.Response(message.Content);
     });
 
     app.Run();

@@ -9,10 +9,11 @@ try
         return "Thanks Lord";
     });
 
-    app.MapPost("/api/profile/assistant", async (DeepseekMessage message) =>
-    {
-        var handler = new ProfileAssistantHandler();
-        return await handler.Response(message.Content);
+    app.MapPost("/api/profile/assistant", async (DeepseekMessage[] messages) =>
+    { 
+        var client = new DeepseekApiClient();
+        var response = await client.SendChatRequestAsync(messages);
+        return response;
     });
 
     app.Run();

@@ -17,7 +17,11 @@ try
         return "Thanks Lord"; 
     });
     
-    app.MapProfileAssistantEndpoints();
+    app.MapGet("/api/profile", () =>
+    {
+      Log.Information("Log from profile");
+      return "profile";
+    });
 
     app.Run();
 }

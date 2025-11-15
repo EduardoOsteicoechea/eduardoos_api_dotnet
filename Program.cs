@@ -14,7 +14,7 @@ try
     app.MapGet("/api", () =>
     {
         Log.Information("Received Request");
-        return "Thanks Lord";
+        return "Thanks Lord"; 
     });
 
     app.Run();

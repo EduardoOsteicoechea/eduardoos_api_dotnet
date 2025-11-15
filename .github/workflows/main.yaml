@@ -44,8 +44,6 @@ jobs:
             sudo cp -r "$TEMP_CLONE_DIR"/* "$DEST_DIR"/
 
             sudo rm -rf "$TEMP_CLONE_DIR"
-
-            sudo chmod +x /var/www/html/api/bin/Release/net9.0/eduardoos_api_dotnet.exe
                   
             sudo rm -rf /var/cache/nginx/*                  
             echo "Restarting Nginx..."

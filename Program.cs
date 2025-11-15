@@ -1,12 +1,3 @@
-using Serilog;
-
-Log.Logger = new LoggerConfiguration()
-    .WriteTo.Console()
-    .WriteTo.File("logs/eduardoos_api.txt", rollingInterval: RollingInterval.Day)
-    .CreateLogger();
-
-
-
 try
 {
     var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +6,6 @@ try
 
     app.MapGet("/api", () =>
     {
-        Log.Information("Received Request");
         return "Thanks Lord";
     });
 
@@ -29,9 +19,5 @@ try
 }
 catch (System.Exception ex)
 {
-    Log.Fatal($"{ex.Message} - {ex.StackTrace}");
-}
-finally
-{
-    Log.CloseAndFlush();
+    Console.WriteLine($"{ex.Message} - {ex.StackTrace}");
 }

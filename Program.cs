@@ -6,7 +6,7 @@ try
 
     app.MapGet("/api", () =>
     {
-        return "Thanks Lord";
+        return "Thanks Lord For all of this";
     });
 
     app.MapPost("/api/profile/assistant", async (DeepseekChat messages) =>

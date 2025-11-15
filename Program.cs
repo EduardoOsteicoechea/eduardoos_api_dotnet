@@ -5,6 +5,8 @@ Log.Logger = new LoggerConfiguration()
     .WriteTo.File("logs/eduardoos_api.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
+
+
 try
 {
     var builder = WebApplication.CreateBuilder(args);
@@ -17,10 +19,10 @@ try
         return "Thanks Lord"; 
     });
     
-    app.MapGet("/api/profile", () =>
+    app.MapGet("/api/profile/assistant", () =>
     {
-      Log.Information("Log from profile");
-      return "profile";
+      var handler = new ProfileAssistantHandler();
+      return handler.Response();
     });
 
     app.Run();

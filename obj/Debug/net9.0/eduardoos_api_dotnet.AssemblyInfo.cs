@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("eduardoos_api_dotnet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ebf2615f52ec68b0cb058b8a13d2afb14ccc06c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+becbe116a03315ca79b4dcb4134331bb570dec8a")]
 [assembly: System.Reflection.AssemblyProductAttribute("eduardoos_api_dotnet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("eduardoos_api_dotnet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

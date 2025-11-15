@@ -38,7 +38,8 @@ public class DeepseekApiClient
             if (response.IsSuccessStatusCode)
             {
                 string responseBody = await response.Content.ReadAsStringAsync();
-                return responseBody;
+                DeepseekChatResponse serializedResponse = Newtonsoft.Json.JsonConvert.DeserializeObject<DeepseekChatResponse>(responseBody);
+                return serializedResponse.Choices.FirstOrDefault().Message.Content;
             }
             else
             {

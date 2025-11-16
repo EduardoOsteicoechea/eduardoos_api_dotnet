@@ -10,35 +10,11 @@ public class DeepseekApiClient
             return "Error: CRITICAL_FAILURE. The server environment variable 'PROFILE_ASSISTANT_API_KEY' is NULL or EMPTY. The service must be restarted or the variable is in the wrong location.";
         }
 
-        var modelTunningDataPath = "/var/www/html/dist/rag/about_eduardo_model_tunning.txt";
-        var profileRagDataPath = "/var/www/html/dist/rag/about_eduardo_profile_rag_data.txt";
-
-        var modelTunningData = "";
-        var profileRagData = "";
-
-        try
-        {
-            modelTunningData = await File.ReadAllTextAsync(modelTunningDataPath);
-            profileRagData = await File.ReadAllTextAsync(profileRagDataPath);
-        }
-        catch (FileNotFoundException ex)
-        {
-            return $"Error: File not found. Make sure the file exists at {ex.FileName}";
-        }
-        catch (UnauthorizedAccessException)
-        {
-            return "Error: CRITICAL_FAILURE. The API service does not have permission to read the RAG files. Check file permissions on the server.";
-        }
-        catch (Exception ex)
-        {
-            return $"Error: An unexpected error occurred while reading files. {ex.Message}";
-        }
-
         var messages = new List<DeepseekMessage>();
-        
-        messages.Add(new DeepseekMessage { Role = "system", Content = modelTunningData });
 
-        messages.Add(new DeepseekMessage { Role = "user", Content = $"Use the following context to answer the user's question: {profileRagData}" });
+        messages.Add(new DeepseekMessage { Role = "system", Content = Constants.ProfileModelTunningData });
+
+        messages.Add(new DeepseekMessage { Role = "user", Content = $"Use the following context to answer the user's question: {Constants.ProfileRagData}" });
 
         foreach (DeepseekMessage item in previousMessages)
         {

@@ -31,5 +31,5 @@ public class DeepseekMessage
 public class DeepseekChat
 {
     [JsonProperty("messages")]
-    public DeepseekMessage[] Messages { get; set; }
+    public DeepseekMessage[] Messages { get; set; } 
 }

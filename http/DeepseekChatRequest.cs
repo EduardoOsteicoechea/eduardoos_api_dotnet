@@ -25,7 +25,7 @@ public class DeepseekMessage
 
     [JsonProperty("content")]
     public string Content { get; set; }
-}
+} 
 
 
 public class DeepseekChat
